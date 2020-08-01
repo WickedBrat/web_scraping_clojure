@@ -20,7 +20,8 @@
          (str "/page-" page-number ".html"))
          (if (not (= page-number :all))
           (parse-page-numbers (range (Integer. (get (clojure.string/split (get (clojure.string/split (str page-number) #"-") 0) #":") 1))  (+ (Integer.(get (clojure.string/split (str page-number) #"-") 1)) 1)))
-          )
+          
+         (parse-page-numbers (range 1 11)))
          )
          ) list-of-page-numbers)
 )
